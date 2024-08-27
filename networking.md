@@ -34,7 +34,14 @@ curl ifconfig.me -s
 ## Modem & Router
 - Modem is used to convert digital signals into analogue (electrical) signals and vv.
 - Router - routes the data packets based on their ip addresses.
+- IP address is the phone book of the internet. ISP are companies which provide access to the internet. Tier 2 ISP providers take internet from Tier 1 ISP providers.
 
+## Topologies
+![alt text](image.png)
+
+1. In **Bus** if main link gets broken, it will spoil the entire network. Also only 1 person can send data at a time.
+2. **Ring** - every system communicates with one another. But again if cable breaks then we wont be able to transfer data. Also lot of unnecessary calls are being made. A to F will have to go to B and C.
+3. In Star, if central device fails, everything will go down.
 
 OSI MODEL 
 
