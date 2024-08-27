@@ -16,7 +16,25 @@ curl ifconfig.me -s
 - Port for mongodb is 27017.
 - ports 0 to 1023 are reserved ports
 - ports 1024 to 49152 are registered for applications like mongodb and mysql etc.
+- 1 MBPS means 1 mega bits per second.
+
+## Types of Networks
+**_LAN:_** For a small house / office. Network adapter is used or wifi
+
+**_MAN:_** Metropolitan area network across a city
+
+**_WAN:_**  Wide area network across countries using optical fibre cables.
+
+- Internet is a collection of all 3 above.
+- A lot of LANs are connected to each other using MAN, which are connected to each other using WANs.
+
+1. SONET - synchronous optical networking. carries data using optical fibre cables, hence can cover larger distances.
+2. Frame Relay - connect LAN to WAN
+
+## Modem & Router
+- Modem is used to convert digital signals into analogue (electrical) signals and vv.
 - 
+
 
 OSI MODEL 
 
