@@ -41,14 +41,25 @@ curl ifconfig.me -s
 
 1. In **Bus** if main link gets broken, it will spoil the entire network. Also only 1 person can send data at a time.
 2. **Ring** - every system communicates with one another. But again if cable breaks then we wont be able to transfer data. Also lot of unnecessary calls are being made. A to F will have to go to B and C.
-3. In Star, if central device fails, everything will go down.
+3. In **Star**, if central device fails, everything will go down.
+4. **Mesh** - Every computer is connected to every other computer - Expensive and not scalable.
+5. **Bus Star Topology:**
+![alt text](image-1.png)
 
-OSI MODEL 
+----
+## Structure of the Network
+### 1. OSI MODEL (Theoretical)
 
-ALL             - APPLICATION LAYER
-PEOPLE     - PRESENTATION LAYER
-SHOULD    - SESSION LAYER
-TRY            - TRANSPORT LAYER
-NEW           - NETWORK LAYER
-DOMINOS  -  DATALINK
-PIZZA         - PHYSICAL LAYER
+OSI - Open systems inter connection model. How servers should communicate with each other. 7 layers.
+
+- ALL `APPLICATION LAYER`
+- PEOPLE `PRESENTATION LAYER`
+- SHOULD `SESSION LAYER`
+- TRY `TRANSPORT LAYER`
+- NEW `NETWORK LAYER`
+- DOMINOS  `DATALINK`
+- PIZZA `PHYSICAL LAYER`
+
+![alt text](image-2.png)
+
+Internet is very complex and OSI model is 
