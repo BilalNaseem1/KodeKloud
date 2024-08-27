@@ -10,5 +10,20 @@
 ```bash
 curl ifconfig.me -s
 ```
+## Ports
+- Ports are 16 bit numbers - so total port numbers which are possible are 2^16.
+- Web pages use http. All http stuff happens at port `80`.
+- Port for mongodb is 27017.
+- ports 0 to 1023 are reserved ports
+- ports 1024 to 49152 are registered for applications like mongodb and mysql etc.
+- 
 
- 
+OSI MODEL 
+
+ALL             - APPLICATION LAYER
+PEOPLE     - PRESENTATION LAYER
+SHOULD    - SESSION LAYER
+TRY            - TRANSPORT LAYER
+NEW           - NETWORK LAYER
+DOMINOS  -  DATALINK
+PIZZA         - PHYSICAL LAYER
