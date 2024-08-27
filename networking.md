@@ -33,7 +33,7 @@ curl ifconfig.me -s
 
 ## Modem & Router
 - Modem is used to convert digital signals into analogue (electrical) signals and vv.
-- 
+- Router - routes the data packets based on their ip addresses.
 
 
 OSI MODEL 
