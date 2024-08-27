@@ -44,6 +44,7 @@ curl ifconfig.me -s
 3. In **Star**, if central device fails, everything will go down.
 4. **Mesh** - Every computer is connected to every other computer - Expensive and not scalable.
 5. **Bus Star Topology:**
+
 ![alt text](image-1.png)
 
 ----
@@ -61,5 +62,12 @@ OSI - Open systems inter connection model. How servers should communicate with e
 - PIZZA `PHYSICAL LAYER`
 
 ![alt text](image-2.png)
+
+- Presentation layer takes data from application layer and converts it into machine representable binary format. It is also compressend and abstracted. SSL protocol is used for this.
+- Session layer helps in setting up and managing connections. It enables sending and recieving of data folloowed by termination of connected sessions. Before a session is established, authentication is done. Authorization is also done.
+- Data recieved from the session layer is divided into small parts called segments. `Every segment will contain the source and the destination's port number and a sequence number`.
+- Sequence number helps in reassembling of segments in correct order.
+- Network stage is about communicating with the external network - Router lives here. This stage is responsible for logical addressing. Network layer assigns the senders and recievers IP address to every segment and it forms an IP packet so that every data packet can reach the correct destination. It also performs routing - moving data packet from source to destination.
+- Data link layer allows to directly communicate with the computers and hosts. This layer will recieve the data packet from the 
 
 Internet is very complex and OSI model is 
