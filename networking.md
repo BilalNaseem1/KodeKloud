@@ -78,4 +78,19 @@ OSI - Open systems inter connection model. How servers should communicate with e
     2. Reciever's IP address
     3. Subnet mask
 - MAC addresses of the sender and reciever are assigned to the data packet to form a frame.
-Internet is very complex and OSI model is 
+- MAC address is a 12 digit alpha-numeric number of the network interface of your computer.
+- The Data link layer performs 2 functions:
+    1. It will allow upper layers to access / pass frames
+    2. It controls how the data is placed and recieved from the media using media access control.
+
+## TCP/IP Model
+It is known as the internet protocol suite. It has 5 layers - image is above.
+
+Application layer is the main layer user's interact with.
+
+Making a request to google.com
+```bash
+ping google.com
+```
+- ping means the round trip time for messages sent from the originating host to the destination of the computer and coming back.
+- In P2P no central server and is decentralized. Every single computer can be a client and a server - e.g. torrent.
