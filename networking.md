@@ -68,6 +68,14 @@ OSI - Open systems inter connection model. How servers should communicate with e
 - Data recieved from the session layer is divided into small parts called segments. `Every segment will contain the source and the destination's port number and a sequence number`.
 - Sequence number helps in reassembling of segments in correct order.
 - Network stage is about communicating with the external network - Router lives here. This stage is responsible for logical addressing. Network layer assigns the senders and recievers IP address to every segment and it forms an IP packet so that every data packet can reach the correct destination. It also performs routing - moving data packet from source to destination.
-- Data link layer allows to directly communicate with the computers and hosts. This layer will recieve the data packet from the 
-
+### Data Link layer
+- Physical addressing is done at the data link layer (MAC addresses)
+- Data link layer allows to directly communicate with the computers and hosts. This layer will recieve the data packet from the network layer.
+- This data packet contains the IP addresses of both the sender and the reciever.
+- Computer A of ip of 192.168.1.1 (sender) is connected to the wifi, which sends a message to facebook whose server will have IP of 192.168.3.1 (reciever)
+- Every packet contains 3 things:
+    1. Sender's IP address
+    2. Reciever's IP address
+    3. Subnet mask
+- MAC addresses of the sender and reciever are assigned to the data packet to form a frame.
 Internet is very complex and OSI model is 
