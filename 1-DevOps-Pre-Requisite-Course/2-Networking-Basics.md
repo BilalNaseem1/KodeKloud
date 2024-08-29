@@ -46,8 +46,42 @@ So when we have devices in a network, they all are known as hosts in the network
 [Basics of IP Address & Subnetting Part II](https://www.youtube.com/watch?v=tcae4TSSMo8&list=PLIhvC56v63IKrRHh3gvZZBAGvsvOhwrRF&index=2)
 
 - There are 4.3 Billion (`0-255 . 0-255 . 0-255 . 0-255  ~= 2^32`) possible IP Addresses, and all of them are run out. 
+- There are 5 groups of IP addresses A to E
+- Classes A, B and C each have their own default subnet mask (It determines how big the network is / which numbers in our IP address remain the same and which change)
+- In class A only the first octet is static, rest can change - so overall 16 million IP addresses are possible in 1 network.
+- Big companies have category A IP addresses - each has 16 million IP addresses (hosts) - There are only 126 class A networks.
+- IANA is responsible for giving away IP addresses
+- Big companies break it into smaller networks
+- IP addresses which have subnet mask of `255.255.255.0` are called classless network.
+- In class B 65k ip addresses are possible and 16k networks are possible.
+- In class C 254 IP addresses are possible and 2M networks are possible.
+```
+Class C gives us the most networks and smaller number of hosts per network.
+Class A gives us v high # of hosts per network but only 126 networks. 
+```
+- Class D and E networks are untouchable (reserved).
 
 ![alt text](image-9.png)
+
+### Missing IP Addresses
+- Between class A and B, there are 16 million IP addresses.
+- These are known as loop back addresses and are used in our devices.
+- `ping` means are you alive and awake?
+```
+Loopback addresses are special IP addresses used by a computer to refer to itself. The most common loopback address is 127.0.0.1, which is used for testing and troubleshooting network configurations. It allows a device to send and receive data to itself without accessing the network, ensuring the network stack is functioning correctly.
+```
+Our computer has 16 million IP addresses ready to respond to itself.
+```
+ping 127.0.0.1 
+ping 127.145.145.8
+```
+
+![alt text](image-10.png)
+---
+## Private IP Addresses
+[Basics of IP Address & Subnetting Part III](https://www.youtube.com/watch?v=8bhvn9tQk8o&list=PLIhvC56v63IKrRHh3gvZZBAGvsvOhwrRF&index=3)
+
+
 ---
 - 2 computers are connected via switches
 - The switch connects 2 computers by connecting to interfaces of hosts on each of the computers
