@@ -113,9 +113,31 @@ ping 127.145.145.8
 ## Decimal to Binary Conversion of IP Addresses
 [Basics of IP Address & Subnetting Part IV](https://www.youtube.com/watch?v=2-i5x8KCfII&list=PLIhvC56v63IKrRHh3gvZZBAGvsvOhwrRF&index=4)
 
+- The computer interprets the IP addresses like the image below - its in binary (the language of the computer) 
 - bits is the bottom.
+- In the IP address there are 32 numbers (bits)  
+- 8 bits make up 1 byte.
 
 ![alt text](image-14.png)
+
+#### How big is an IP address in bits?
+- 32 bits
+- Each octet is 8 bits. oct means 8 which is why octets.
+#### How big is an IP address in bytes?
+- 32/8 = 4 bytes
+#### Binary to Decimal
+- All numbers are 2^n
+
+![alt text](image-15.png)
+
+#### Decimal to Binary
+- For `172.16.34.3`, ans is `1 0 1 0 1 1 0 0`
+
+![alt text](image-16.png)
+
+---
+## The Subnet Mask
+[Basics of IP Address & Subnetting Part V](https://www.youtube.com/watch?v=oZGZRtaGyG8&list=PLIhvC56v63IKrRHh3gvZZBAGvsvOhwrRF&index=5)
 
 ---
 
