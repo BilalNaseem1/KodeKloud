@@ -139,6 +139,15 @@ ping 127.145.145.8
 ## The Subnet Mask
 [Basics of IP Address & Subnetting Part V](https://www.youtube.com/watch?v=oZGZRtaGyG8&list=PLIhvC56v63IKrRHh3gvZZBAGvsvOhwrRF&index=5)
 
+- Every IP address has a subnet mask, and it tells us all the secrets of the network (some of them).
+
+#### Converting the subnet mask into binary
+
+![alt text](image-17.png)
+
+The Subnet mask converted into binary:
+
+![alt text](image-18.png)
 ---
 
 - 2 computers are connected via switches
