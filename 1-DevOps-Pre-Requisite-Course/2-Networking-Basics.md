@@ -81,6 +81,24 @@ ping 127.145.145.8
 ## Private IP Addresses
 [Basics of IP Address & Subnetting Part III](https://www.youtube.com/watch?v=8bhvn9tQk8o&list=PLIhvC56v63IKrRHh3gvZZBAGvsvOhwrRF&index=3)
 
+- In 1996 we were about to run out of IP addresses, but this was solved by `RFC1918` (Private IP addresses)
+- Class A, B and C of IP addresses are now referred to as public IP addresses - meaning IP addresses which can be reached on the internet.
+- The internet can be thought of as a big network
+- So to connect to the internet we need a public IP address but it needs to be unique.
+### Private IP addresses
+
+![alt text](image-11.png)
+
+- Most common private IP addresses home routers use is class C ip address range.
+- Private IP adresses dont connect to you to the internet (they are not publically routable on the internet - cant talk to them from the internet)
+- NAT is responsible for connecting to the internet. 
+### NAT
+- NAT (Network address translation) is performed by the router.
+- NAT is responsible for translating private IP address to a public one when it leaves the router
+- The router assigns private IP addresses (not unique and millions can have the same)
+- The ISP (internet service provider) gives 1 public IP address to the router.
+
+![alt text](image-12.png)
 
 ---
 - 2 computers are connected via switches
