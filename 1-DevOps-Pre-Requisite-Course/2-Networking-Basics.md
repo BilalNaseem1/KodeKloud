@@ -97,10 +97,28 @@ ping 127.145.145.8
 - NAT is responsible for translating private IP address to a public one when it leaves the router
 - The router assigns private IP addresses (not unique and millions can have the same)
 - The ISP (internet service provider) gives 1 public IP address to the router.
+- So every device in the home network, when it accesses anything on the internet, their identity is the same public IP address
+`google what is my ip?`
 
 ![alt text](image-12.png)
 
+- But we still run out of IPv addresses, and to solve that we came up with `IPv6` addresses.
+
+![alt text](image-13.png)
+
+- Every device which exists can have a public IPv6 address and connect to the internet.
+- All phones connected via cellular networks have `IPv6` address.
+
 ---
+## Decimal to Binary Conversion of IP Addresses
+[Basics of IP Address & Subnetting Part IV](https://www.youtube.com/watch?v=2-i5x8KCfII&list=PLIhvC56v63IKrRHh3gvZZBAGvsvOhwrRF&index=4)
+
+- bits is the bottom.
+
+![alt text](image-14.png)
+
+---
+
 - 2 computers are connected via switches
 - The switch connects 2 computers by connecting to interfaces of hosts on each of the computers
 - To see interfaces of the host - `iplink`
