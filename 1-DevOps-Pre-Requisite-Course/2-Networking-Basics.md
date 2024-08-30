@@ -148,6 +148,13 @@ ping 127.145.145.8
 The Subnet mask converted into binary:
 
 ![alt text](image-18.png)
+
+- Network bits - are part of IP address that dont change, tell us on which network we are on.
+- The 0s tell us which part of the IP address are host bits.
+- 2^8 (8 0s in host) - number of possible hosts/ip addresses in this network. But 2 are reserved.
+#### But what if we need more than 256 addresses in our network?
+- 
+
 ---
 
 - 2 computers are connected via switches
