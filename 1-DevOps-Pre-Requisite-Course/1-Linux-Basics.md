@@ -50,14 +50,14 @@ service <service name> start
 systemctl start <service name>   # newer    
 
 ```
-![alt text](image.png)
+![alt text](images/image.png)
 
 ## Configuring a service to start on launch
 - For this we must configure our program as `systemd service`
 - A systemd service is configured as a `systemd unit` file
 - These files may be located at `/etc/systemd/system`
 - The file is named as `<service-name>.service`
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 enable httpd service so that it starts automatically when system boots up
 ```bash
@@ -65,4 +65,4 @@ sudo systemctl enable httpd
 cd /usr/lib/systemd/system/
  ```
  - Check the value for the directive ExecStartPre in the file /usr/lib/systemd/system/app.service
- ![alt text](image-2.png)
+ ![alt text](images/image-2.png)

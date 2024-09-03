@@ -20,4 +20,4 @@ u # undo
 cntrl+r # redo
 ```
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
