@@ -256,7 +256,20 @@ ip route add default via 198.168.2.1
 
 Telling system A that when I say db, i mean IP 192.168.1.11
 ```bash
+sudo nano /etc/hosts
+#or
 cat >> /etc/hosts
 192.168.1.11 db
 ```
 Whatever we put in the etc host file is the source of truth for host A.
+
+### DNS Server
+All hosts are pointed to lookup that server if they need to resolve a host name to an IP address istead of of its own.
+- Every host has a DNS resolution configuration file at `/etc/resolv.conf`
+
+#### Priority Order:
+
+- `/etc/hosts file:` The system first checks the /etc/hosts file for any matching hostname. If a match is found, it uses the IP address specified in this file.
+- `DNS server:` If the hostname is not found in /etc/hosts, the system then queries the DNS server to resolve the IP address.
+
+Which of the following command is used to query a hostname from a DNS server? - `nslookup`

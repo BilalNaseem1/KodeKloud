@@ -85,3 +85,5 @@ file [file name]
 ```bash
 df -hP # prints details of all mounted file systems
 ```
+
+The `sudo lshw` command in Linux is used to display detailed information about the hardware configuration of the system. The lshw (List Hardware) tool provides a comprehensive report on various components of the hardware, such as the CPU, memory, storage devices, network interfaces, and more.
