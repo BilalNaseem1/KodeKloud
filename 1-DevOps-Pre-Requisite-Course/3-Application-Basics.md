@@ -43,3 +43,15 @@ Running NodeJS code:
 ```javascript
 node /home/add.js
 ```
+
+- All nodejs packages are available at a public repo - `npmjs.com`
+- NPM allows to develop new reusable packages and share them on the public repo. 
+
+```javascript
+npm -v
+
+npm search file // search for a file
+
+npm install [package name]
+sudo npm install file -g // install globally
+```
