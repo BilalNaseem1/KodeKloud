@@ -1,4 +1,4 @@
-### Docker Engine
+# Docker Engine
 
 Docker engine means the host with docker installed on it.
 
@@ -30,7 +30,23 @@ Each line of instruction in the dockerfile creates a new layer in the docker ima
 The life of layer 6 is as long as the container is alive. Files in the image layer are read only and cannot be edited.
 
 ### Copy on write mechanism
-If a file in the image layer is to be edited, its copy is first made in the read layer and that is edited.
+If a file in the image layer is to be edited, its copy is first made in the read layer and that is edited. The code is part of the image layer and is read only.
+- The same image layer may be shared between multiple containers created from this image.
+- To modify the file in the image layer it is copied onto the Read Write Layer and that version is modified.
+- Since the files in the image layers are not modified, the image remains the same all the time until it is rebuilt using the docker build command.
+- When a container is deleted, all of the data stored in the container layer also gets deleted. 
 
 ## Volumes
-To preserve the data created by the container (read layer), we add a persistant volume to the container. We create a docker volume 
+To preserve the data created by the container (read layer), we add a persistant volume to the container. We create a docker volume.
+
+### Creating a volume
+- Volumes are created under the `var/lib/docker/volumes` folder inside the container. docker is replaced by the container name.
+- The second command is used to run the docker container. The volume is mounted inside the docker container's read write layer using the -v option
+```bash
+docker volume create data_volume # It creates a folder named data_volume
+
+docker run -v data_volume:/var/lib/mysql mysql
+```
+- This will create a new layer and mount the data volume we created into `var/lib/mysql` folder inside the container. All data written by the database is stored on the volume created on the docker host.
+- Even if the container is destroyed, the data is still active
+- We can run the 2nd command directly, it will automatically create a volume and mount it to the container.
