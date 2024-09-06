@@ -40,7 +40,7 @@ If a file in the image layer is to be edited, its copy is first made in the read
 To preserve the data created by the container (read layer), we add a persistant volume to the container. We create a docker volume.
 
 ### Creating a volume
-- Volumes are created under the `var/lib/docker/volumes` folder inside the container. docker is replaced by the container name.
+- Volumes are created under the `var/lib/docker/volumes` folder. docker is replaced by the container name.
 - The second command is used to run the docker container. The volume is mounted inside the docker container's read write layer using the -v option
 ```bash
 docker volume create data_volume # It creates a folder named data_volume
@@ -50,3 +50,29 @@ docker run -v data_volume:/var/lib/mysql mysql
 - This will create a new layer and mount the data volume we created into `var/lib/mysql` folder inside the container. All data written by the database is stored on the volume created on the docker host.
 - Even if the container is destroyed, the data is still active
 - We can run the 2nd command directly, it will automatically create a volume and mount it to the container.
+- If we had external storage on the docker host at some location we need to provide the entire folder path. It will create a folder and mount the folder to the container.
+```bash
+docker run -v /data/mysql:var/lib/mysql mysql
+```
+- This is bind mounting, the above one was volume mounting.
+- Volume mount mounts the volume from the volumes directory and bind mount mounts a directory from any location on the docker host.
+- `-v` is the old style, the new way is the `--mount`.
+
+![alt text](image-5.png)
+
+- Docker uses storage drivers to enable layered architectures.
+
+----
+#### Question
+Run a mysql container named mysql-db using the mysql image. Set database password to db_pass123
+```
+docker run --name=mysql-db -d -e MYSQL_ROOT_PASSWORD=db_pass123 mysql
+```
+
+Run a mysql container again, but this time map a volume to the container so that the data stored by the container is stored at /opt/data on the host.
+
+Use the same name : mysql-db and same password: db_pass123 as before. Mysql stores data at /var/lib/mysql inside the container.
+
+```bash
+docker run -v /opt/data:/var/lib/mysql -d --name mysql-db -e MYSQL_ROOT_PASSWORD=db_pass123 mysql
+```
