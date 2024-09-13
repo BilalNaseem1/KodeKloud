@@ -22,4 +22,4 @@ The cluster is managed using a master node. The master is a node with the kubern
 
 Installing kubernetes means installing the following components:
 
-![alt text](image-11.png)
+![alt text](images/image-11.png)

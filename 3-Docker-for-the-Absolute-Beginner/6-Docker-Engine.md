@@ -7,7 +7,7 @@ When we install docker on a linux host, we are installing 3 components:
 2. REST API
 3. Docker deamon
 
-The docker deamon is a background process which manages docker objects such as images, containers, volumes and networks. The docker rest api server is the api interface that programs can use to talk to the deamon and provide instructions.
+The docker deamon is a background process which manages docker objects such as images/images, containers, volumes and networks. The docker rest api server is the api interface that programs can use to talk to the deamon and provide instructions.
 
 The CLI is where we write commands such as docker run. It uses REST API to interact with the docker deamon.
 
@@ -21,19 +21,19 @@ How docker stores data on the local file system?
 When we install docker on a system, it creates a folder structure `/var/lib/docker`
 
 ### Docker's Layered Architecture
-When docker builds images, it builds these in a layered architecture.
+When docker builds images/images, it builds these in a layered architecture.
 
-Each line of instruction in the dockerfile creates a new layer in the docker image with just the changes from the previous layer.
+Each line of instruction in the dockerfile creates a new layer in the docker images/image with just the changes from the previous layer.
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
-The life of layer 6 is as long as the container is alive. Files in the image layer are read only and cannot be edited.
+The life of layer 6 is as long as the container is alive. Files in the images/image layer are read only and cannot be edited.
 
 ### Copy on write mechanism
-If a file in the image layer is to be edited, its copy is first made in the read layer and that is edited. The code is part of the image layer and is read only.
-- The same image layer may be shared between multiple containers created from this image.
-- To modify the file in the image layer it is copied onto the Read Write Layer and that version is modified.
-- Since the files in the image layers are not modified, the image remains the same all the time until it is rebuilt using the docker build command.
+If a file in the images/image layer is to be edited, its copy is first made in the read layer and that is edited. The code is part of the images/image layer and is read only.
+- The same images/image layer may be shared between multiple containers created from this images/image.
+- To modify the file in the images/image layer it is copied onto the Read Write Layer and that version is modified.
+- Since the files in the images/image layers are not modified, the images/image remains the same all the time until it is rebuilt using the docker build command.
 - When a container is deleted, all of the data stored in the container layer also gets deleted. 
 
 ## Volumes
@@ -58,13 +58,13 @@ docker run -v /data/mysql:var/lib/mysql mysql
 - Volume mount mounts the volume from the volumes directory and bind mount mounts a directory from any location on the docker host.
 - `-v` is the old style, the new way is the `--mount`.
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 - Docker uses storage drivers to enable layered architectures.
 
 ----
 #### Question
-Run a mysql container named mysql-db using the mysql image. Set database password to db_pass123
+Run a mysql container named mysql-db using the mysql images/image. Set database password to db_pass123
 ```
 docker run --name=mysql-db -d -e MYSQL_ROOT_PASSWORD=db_pass123 mysql
 ```

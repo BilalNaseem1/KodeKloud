@@ -3,7 +3,7 @@ We can create a configuration file in `yml` and put together the services.
 - All changes are stored in the configuration file
 - But this is only applicable for running containers on a single docker host.
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 Need to link the containers - so that they can communicate with each other.
 ### Links
@@ -12,9 +12,9 @@ Links are deprecated, so not going in its detail.
 
 ## Creating a Docker Compose file
 - Keys are the name of the containers
-- Under each we specify which image to use (key is image and the value is which image to use)
+- Under each we specify which images/image to use (key is images/image and the value is which images/image to use)
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 - In version 2 of docker compose, it automatically creates a dedicated bridged network and attaches all containers to that new network.
 - All containers are then able to communicate with each other using each other's service name.
@@ -23,11 +23,11 @@ Links are deprecated, so not going in its detail.
 - Specifying different networks:
 - ports host:app  web servers have port requirements
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 ## Demo - Voting Application on Docker Compose
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 ```bash
 git clone https://github.com/dockersamples/example-voting-app.git
@@ -50,7 +50,7 @@ cd ..
 cd result
 docker build . -t result-app
 
-docker images
+docker images/images
 docker run -p 5001:80 --link db:db result-app
 ```
 
