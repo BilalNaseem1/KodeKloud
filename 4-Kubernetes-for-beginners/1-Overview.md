@@ -43,3 +43,14 @@ Get all nodes which are part of a cluster
 ```bash
 kubectl get nodes
 ```
+
+Look at the Operating System.
+```bash
+kubectl get nodes -o wide
+```
+
+## Containerd
+Containerd is a container runtime used to manage the entire lifecycle of containers, including downloading images, starting, stopping, and deleting containers. It provides a simple, reliable, and efficient way to run containers and is often used as an underlying component in container orchestration platforms like Kubernetes. 
+
+Containerd is an essential part of Docker, acting as the core container runtime engine.
+
