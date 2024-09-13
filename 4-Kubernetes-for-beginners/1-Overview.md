@@ -7,6 +7,7 @@ Is the go to platform for hosting production-grade applications. Kubernetes is a
 A node is a machine physical/virtual on which kubernetes is installed. A node is a worker machine and that is where containers will be launched. A cluster is a set of nodes grouped together. Having multiple nodes helps in sharing load. The master node is responsible for managing the cluster. The master watches over the nodes in a cluster and is responsible for actual orchestration of the contaiers on the worker nodes.
 
 Installing kubernetes means installing the following components:
+
 ![alt text](image-1.png)
 
 1. **API Server:** Is the front-end of kubernetes
