@@ -30,4 +30,6 @@ kubectl get pods
 
 kubectl describe pods
 kubectl get pods -o wide # node where the pod is running and ip address of pod also
+
+kubectl delete pod webapp
 ```

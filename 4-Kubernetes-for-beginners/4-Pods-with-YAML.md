@@ -37,3 +37,20 @@ spec:
   - name: nginx
     image: nginx
 ```
+
+### Question
+Create a new pod with the name redis and the image redis123.
+Use a pod-definition YAML file. And yes the image name is wrong!
+
+```
+kubectl run redis --image=redis123 --dry-run=client -o yaml > redis-definition.yaml
+
+kubectl create -f redis-definition.yaml
+
+kubectl get pods
+kubectl edit pod redis
+```
+
+![alt text](image-6.png)
+
+webapp app has a total of 2 containers in the pod
