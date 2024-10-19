@@ -1,14 +1,14 @@
 # Overview
 Is the go to platform for hosting production-grade applications. Kubernetes is also known as K8s.
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 ## Kubernetes Architecture
 A node is a machine physical/virtual on which kubernetes is installed. A node is a worker machine and that is where containers will be launched. A cluster is a set of nodes grouped together. Having multiple nodes helps in sharing load. The master node is responsible for managing the cluster. The master watches over the nodes in a cluster and is responsible for actual orchestration of the contaiers on the worker nodes.
 
 Installing kubernetes means installing the following components:
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 1. **API Server:** Is the front-end of kubernetes
 2. **ETCD:** Distributed key value store, used to store all data used to store all data used to manage the cluster. Also stores logs.
@@ -25,7 +25,7 @@ There ae 2 types of nodes:
 - Worker nodes have the `kubelet` agent that is responsible for interacting with the master to provide health info and carry out actions requested by the master on the worker nodes.
 - Master nodes `Kube api server` installed which is responsible for interacting with the user. `ETCD` is also installed on the master. Controller and Scheduler are also installed on the master.
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 ### Kubectl
 Used to deploy and manage applications on a kubernetes cluster.
@@ -51,7 +51,7 @@ kubectl get nodes -o wide
 ```
 
 ## Containerd
-Containerd is a container runtime used to manage the entire lifecycle of containers, including downloading images, starting, stopping, and deleting containers. It provides a simple, reliable, and efficient way to run containers and is often used as an underlying component in container orchestration platforms like Kubernetes. 
+Containerd is a container runtime used to manage the entire lifecycle of containers, including downloading images/images, starting, stopping, and deleting containers. It provides a simple, reliable, and efficient way to run containers and is often used as an underlying component in container orchestration platforms like Kubernetes. 
 
 Containerd is an essential part of Docker, acting as the core container runtime engine.
 

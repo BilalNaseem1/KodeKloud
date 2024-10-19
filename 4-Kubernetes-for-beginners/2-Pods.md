@@ -7,7 +7,7 @@ Container instances are spinned up inside a new pod. Inside a single pod there i
 
 We are not restricted to having a single container in a single pod. A single pod can have multiple containers but they must be of different kinds. Both can communicate with each other by referring to each other as localhost since they share the same network space.
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 Kubernetes does all of this for us automatically.
 But multi-container pods is a rare case.
@@ -18,10 +18,10 @@ Deploying a docker container by creating a pod
 kubectl run nginx
 kubectl run <pod-name> # pod name can be anything
 
-kubectl run nginx --image nginx # which image to use
+kubectl run nginx --images/image nginx # which images/image to use
 ```
-It creates a pod automatically and deployes an instance of the nginx docker image.
--  The image is downloaded from the docker hub repo.
+It creates a pod automatically and deployes an instance of the nginx docker images/image.
+-  The images/image is downloaded from the docker hub repo.
 
 ---
 To see list of pods in the cluster
