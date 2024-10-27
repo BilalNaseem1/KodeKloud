@@ -202,3 +202,57 @@ Save the api to a collection
 Api now in collection
 
 ![alt text](image-12.png)
+
+### Getting a single post
+
+```python
+@app.get("/posts/{uid}")
+def get_post(id):
+    ...
+
+```
+
+## Response Status
+
+```python
+from fastapi import Response, status
+from fastapi import HTTPException
+
+@app.get("/posts/{id}")
+def get_post(id, response):
+    post = find_post(id,)
+
+    if not post:
+        raise HTTPException(status_code = status.HTTP_404_NOT_FOUND,
+                            detail= f"post with id: {id} was not found"
+                                )
+    #     response.status_code = status.HTTP_404_NOT_FOUND
+    #     return {"message": f"post with id: {id} was not found"}
+```
+
+## Deleting a post
+
+
+```python
+@app.delete("posts/{id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_post(id):
+    index=find_index_post(id)
+    my_posts.pop(index)
+    return Response(status_code=status.HTTP_204_NO_CONTENT)
+```
+
+- To see the documentation:
+```python
+localhost:8000/docs
+```
+
+# Structuring the code
+- python has a concept of packages, which is just a folder
+- for something to act as a package, it needs a dummy file `__init__.py`
+```python
+-app
+-- __init__.py
+-- main.py
+
+uvicorn app.main:app --reload
+```

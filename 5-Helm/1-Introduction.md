@@ -55,8 +55,23 @@ helm verision
 ## Helm Charts in detail
 - Charts are a set of files and contain instructions that Helm needs in order to be able to create a collection of objects that you need in your kubernetes cluster. By using these charts Helm installs applications in our cluster
 - In Helm, aside from deployment and service, `values.yaml` file is also created. This is because we dont build charts by ourselves as we have hundreds of them already available for download in a public repo. We configure the package which we installed through that chart - and values.yaml file is the file where the configurable values are stored. Mostly this is the only file which we need to customize the deployment of the application for or needs. Its like a settings file for the Helm Chart.
+- Apart from the values.yaml file, there is also `Chart.yaml` file which contains information about the chart itself such as the chart api version, app version, name, description etc.
 
 ![alt text](image-3.png)
+
+![alt text](image-5.png)
+
+- apiversion tells about charts built for helm 2, 3 etc.
+- There are 2 types of charts:
+    - application
+    - library
+- A database which has its own helm chart is below listed as a dependancy.
+
+![alt text](image-6.png)
+
+## Structure of Charts directory
+
+![alt text](image-7.png)
 
 When a chart is applied to the cluster, a release is created
 
@@ -72,3 +87,9 @@ Example use case:
 - Since both websites are based of the same charts (are essentially clones), changes can be transferred to the main website in the exact same way.
 
 ![alt text](image-4.png)
+
+- There are different providers hosting Helm repositories such as Appscode, Community operations, Truecharts, Bitnami etc.
+
+All of these repositories have listed their charts in a single location known as the Helm Hub aka ArtifactHub.
+
+Helm is essentially an automation tool.
