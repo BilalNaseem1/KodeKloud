@@ -133,3 +133,34 @@ helm install
 ```
 
 ## Lifecycle management with Helm
+
+Each time we install a chart, a release is created. A release is similar to an app. It represents a collection of Kubernetes objects.
+
+Helm knows what kubernetes objects belong to each release, hence it can upgrade/ downgrade individual releases without touching other releases of the same chart. In other words, each release can be managed independently, even if they are all based on the same chart.
+
+Helm keeps track of everything related to a release, so we don't have to upgrade our objects one by one. Helm can automatically upgrade them all with one single command:
+
+```bash
+kubectl get pods # get name of pods
+
+helm upgrade nginx-release bitnami/nginx
+helm upgrade dazzling-web bitnami/nginx --version 13
+
+kubectl get pods # get new pod names
+
+helm list # list current releases
+
+helm history RELEASE_NAME [flags] # more details about a release
+
+helm rollback nginx-release 1 # specify on which release we want to rollback to
+```
+
+we tell helm what release we want to upgrade and specify the chart this release is based on.
+
+In the upgrade process the old pod gets destroyed and a new one gets created.
+
+Some upgrades require administrative access to the databases and others.
+
+Helm backs up and restores the manifest files of objects . Rollback does not restore data of persistent data. For e.g. if we rollback MySQL database, then MySQL pods will be restored to their previous states, but the actual data will remain same in the database. Chart hooks are used to rollback data in the database along with other options which will be discussed later
+
+![alt text](image-10.png)
